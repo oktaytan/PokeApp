@@ -9,19 +9,49 @@
 /* Begin PBXBuildFile section */
 		66812CF429CC79D6004CD51E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812CF329CC79D6004CD51E /* AppDelegate.swift */; };
 		66812CF629CC79D6004CD51E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812CF529CC79D6004CD51E /* SceneDelegate.swift */; };
-		66812CF829CC79D6004CD51E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812CF729CC79D6004CD51E /* ViewController.swift */; };
 		66812CFD29CC79D6004CD51E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66812CFC29CC79D6004CD51E /* Assets.xcassets */; };
 		66812D0029CC79D6004CD51E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66812CFE29CC79D6004CD51E /* LaunchScreen.storyboard */; };
+		66812D1229CC7FC7004CD51E /* PokeListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D1129CC7FC7004CD51E /* PokeListVC.swift */; };
+		66812D1429CC7FE5004CD51E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D1329CC7FE5004CD51E /* BaseViewController.swift */; };
+		66812D1929CC814B004CD51E /* PokeListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66812D1829CC814B004CD51E /* PokeListVC.xib */; };
+		66812D1C29CC830C004CD51E /* ToastMessageBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D1B29CC830C004CD51E /* ToastMessageBar.swift */; };
+		66812D1E29CC832F004CD51E /* BaseCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D1D29CC832F004CD51E /* BaseCustomView.swift */; };
+		66812D2029CC8357004CD51E /* ToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D1F29CC8357004CD51E /* ToastMessage.swift */; };
+		66812D2429CC83E4004CD51E /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2329CC83E4004CD51E /* AppConstants.swift */; };
+		66812D2629CC83F2004CD51E /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2529CC83F2004CD51E /* AppDesign.swift */; };
+		66812D2929CC8441004CD51E /* NSObject+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2829CC8441004CD51E /* NSObject+Ext.swift */; };
+		66812D2B29CC84A4004CD51E /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2A29CC84A4004CD51E /* UIColor+Ext.swift */; };
+		66812D2D29CC84CF004CD51E /* UITableView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2C29CC84CF004CD51E /* UITableView+Ext.swift */; };
+		66812D2F29CC84EA004CD51E /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D2E29CC84EA004CD51E /* UIView+Ext.swift */; };
+		66812D3229CC8584004CD51E /* ToastMessageBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66812D3129CC8584004CD51E /* ToastMessageBar.xib */; };
+		66812D3529CC8928004CD51E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D3429CC8928004CD51E /* LoadingView.swift */; };
+		66812D3729CC894A004CD51E /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66812D3629CC894A004CD51E /* LoadingView.xib */; };
+		66812D3B29CC8AAF004CD51E /* PokeListScreenBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D3A29CC8AAF004CD51E /* PokeListScreenBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		66812CF029CC79D6004CD51E /* PokeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66812CF329CC79D6004CD51E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66812CF529CC79D6004CD51E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66812CF729CC79D6004CD51E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		66812CFC29CC79D6004CD51E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		66812CFF29CC79D6004CD51E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		66812D0129CC79D6004CD51E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66812D1129CC7FC7004CD51E /* PokeListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeListVC.swift; sourceTree = "<group>"; };
+		66812D1329CC7FE5004CD51E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		66812D1829CC814B004CD51E /* PokeListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PokeListVC.xib; sourceTree = "<group>"; };
+		66812D1B29CC830C004CD51E /* ToastMessageBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessageBar.swift; sourceTree = "<group>"; };
+		66812D1D29CC832F004CD51E /* BaseCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCustomView.swift; sourceTree = "<group>"; };
+		66812D1F29CC8357004CD51E /* ToastMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastMessage.swift; sourceTree = "<group>"; };
+		66812D2329CC83E4004CD51E /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		66812D2529CC83F2004CD51E /* AppDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		66812D2829CC8441004CD51E /* NSObject+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Ext.swift"; sourceTree = "<group>"; };
+		66812D2A29CC84A4004CD51E /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
+		66812D2C29CC84CF004CD51E /* UITableView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Ext.swift"; sourceTree = "<group>"; };
+		66812D2E29CC84EA004CD51E /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		66812D3129CC8584004CD51E /* ToastMessageBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToastMessageBar.xib; sourceTree = "<group>"; };
+		66812D3429CC8928004CD51E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		66812D3629CC894A004CD51E /* LoadingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		66812D3A29CC8AAF004CD51E /* PokeListScreenBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeListScreenBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,40 +84,45 @@
 		66812CF229CC79D6004CD51E /* PokeApp */ = {
 			isa = PBXGroup;
 			children = (
-				66812D0729CC7AEB004CD51E /* AppLife */,
-				66812D0B29CC7B19004CD51E /* Service */,
-				66812D0A29CC7B12004CD51E /* Model */,
-				66812D0C29CC7B3A004CD51E /* ViewModel */,
-				66812D0829CC7AFF004CD51E /* View */,
-				66812D0929CC7B0B004CD51E /* Scene */,
-				66812CF729CC79D6004CD51E /* ViewController.swift */,
+				66812D0729CC7AEB004CD51E /* AppDelegate */,
+				66812D0B29CC7B19004CD51E /* Network */,
+				66812D0929CC7B0B004CD51E /* Layers */,
+				66812D0829CC7AFF004CD51E /* Views */,
+				66812D1A29CC81D0004CD51E /* Utilities */,
 				66812D0D29CC7B4C004CD51E /* Supporting Files */,
 				66812D0129CC79D6004CD51E /* Info.plist */,
 			);
 			path = PokeApp;
 			sourceTree = "<group>";
 		};
-		66812D0729CC7AEB004CD51E /* AppLife */ = {
+		66812D0729CC7AEB004CD51E /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
 				66812CF329CC79D6004CD51E /* AppDelegate.swift */,
 				66812CF529CC79D6004CD51E /* SceneDelegate.swift */,
 			);
-			path = AppLife;
+			path = AppDelegate;
 			sourceTree = "<group>";
 		};
-		66812D0829CC7AFF004CD51E /* View */ = {
+		66812D0829CC7AFF004CD51E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				66812D3329CC8919004CD51E /* LoadingView */,
+				66812D3029CC8561004CD51E /* ToastMessageBar */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		66812D0929CC7B0B004CD51E /* Scene */ = {
+		66812D0929CC7B0B004CD51E /* Layers */ = {
 			isa = PBXGroup;
 			children = (
+				66812D3829CC8A61004CD51E /* Builder */,
+				66812D3D29CC8BB9004CD51E /* Data */,
+				66812D3C29CC8B96004CD51E /* Presentation */,
+				66812D3E29CC8BC4004CD51E /* Provider */,
+				66812D0C29CC7B3A004CD51E /* ViewModel */,
 			);
-			path = Scene;
+			path = Layers;
 			sourceTree = "<group>";
 		};
 		66812D0A29CC7B12004CD51E /* Model */ = {
@@ -97,11 +132,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		66812D0B29CC7B19004CD51E /* Service */ = {
+		66812D0B29CC7B19004CD51E /* Network */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Service;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		66812D0C29CC7B3A004CD51E /* ViewModel */ = {
@@ -118,6 +153,128 @@
 				66812CFE29CC79D6004CD51E /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		66812D0E29CC7E60004CD51E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				66812D1329CC7FE5004CD51E /* BaseViewController.swift */,
+				66812D1D29CC832F004CD51E /* BaseCustomView.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		66812D1529CC8032004CD51E /* PokeList */ = {
+			isa = PBXGroup;
+			children = (
+				66812D1129CC7FC7004CD51E /* PokeListVC.swift */,
+				66812D1829CC814B004CD51E /* PokeListVC.xib */,
+			);
+			path = PokeList;
+			sourceTree = "<group>";
+		};
+		66812D1A29CC81D0004CD51E /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				66812D0E29CC7E60004CD51E /* Base */,
+				66812D2229CC83BC004CD51E /* Helpers */,
+				66812D2729CC842D004CD51E /* Extensions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		66812D2229CC83BC004CD51E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				66812D2329CC83E4004CD51E /* AppConstants.swift */,
+				66812D2529CC83F2004CD51E /* AppDesign.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		66812D2729CC842D004CD51E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				66812D2829CC8441004CD51E /* NSObject+Ext.swift */,
+				66812D2A29CC84A4004CD51E /* UIColor+Ext.swift */,
+				66812D2C29CC84CF004CD51E /* UITableView+Ext.swift */,
+				66812D2E29CC84EA004CD51E /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		66812D3029CC8561004CD51E /* ToastMessageBar */ = {
+			isa = PBXGroup;
+			children = (
+				66812D1B29CC830C004CD51E /* ToastMessageBar.swift */,
+				66812D3129CC8584004CD51E /* ToastMessageBar.xib */,
+				66812D1F29CC8357004CD51E /* ToastMessage.swift */,
+			);
+			path = ToastMessageBar;
+			sourceTree = "<group>";
+		};
+		66812D3329CC8919004CD51E /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				66812D3429CC8928004CD51E /* LoadingView.swift */,
+				66812D3629CC894A004CD51E /* LoadingView.xib */,
+			);
+			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		66812D3829CC8A61004CD51E /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				66812D3929CC8A6E004CD51E /* AppFlow */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		66812D3929CC8A6E004CD51E /* AppFlow */ = {
+			isa = PBXGroup;
+			children = (
+				66812D3A29CC8AAF004CD51E /* PokeListScreenBuilder.swift */,
+			);
+			path = AppFlow;
+			sourceTree = "<group>";
+		};
+		66812D3C29CC8B96004CD51E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				66812D1529CC8032004CD51E /* PokeList */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		66812D3D29CC8BB9004CD51E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				66812D3F29CC8BFD004CD51E /* Repository */,
+				66812D4029CC8C03004CD51E /* DataStore */,
+				66812D0A29CC7B12004CD51E /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		66812D3E29CC8BC4004CD51E /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		66812D3F29CC8BFD004CD51E /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		66812D4029CC8C03004CD51E /* DataStore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataStore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +336,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				66812D0029CC79D6004CD51E /* LaunchScreen.storyboard in Resources */,
+				66812D3229CC8584004CD51E /* ToastMessageBar.xib in Resources */,
 				66812CFD29CC79D6004CD51E /* Assets.xcassets in Resources */,
+				66812D1929CC814B004CD51E /* PokeListVC.xib in Resources */,
+				66812D3729CC894A004CD51E /* LoadingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,9 +350,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66812CF829CC79D6004CD51E /* ViewController.swift in Sources */,
+				66812D1E29CC832F004CD51E /* BaseCustomView.swift in Sources */,
+				66812D1429CC7FE5004CD51E /* BaseViewController.swift in Sources */,
+				66812D2F29CC84EA004CD51E /* UIView+Ext.swift in Sources */,
 				66812CF429CC79D6004CD51E /* AppDelegate.swift in Sources */,
+				66812D3529CC8928004CD51E /* LoadingView.swift in Sources */,
 				66812CF629CC79D6004CD51E /* SceneDelegate.swift in Sources */,
+				66812D2929CC8441004CD51E /* NSObject+Ext.swift in Sources */,
+				66812D3B29CC8AAF004CD51E /* PokeListScreenBuilder.swift in Sources */,
+				66812D2B29CC84A4004CD51E /* UIColor+Ext.swift in Sources */,
+				66812D1229CC7FC7004CD51E /* PokeListVC.swift in Sources */,
+				66812D2029CC8357004CD51E /* ToastMessage.swift in Sources */,
+				66812D1C29CC830C004CD51E /* ToastMessageBar.swift in Sources */,
+				66812D2D29CC84CF004CD51E /* UITableView+Ext.swift in Sources */,
+				66812D2629CC83F2004CD51E /* AppDesign.swift in Sources */,
+				66812D2429CC83E4004CD51E /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

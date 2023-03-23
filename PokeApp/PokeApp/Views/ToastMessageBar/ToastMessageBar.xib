@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ToastMessageBar" customModule="PokeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="closeBtn" destination="EBE-qj-a7s" id="tzd-2b-pKe"/>
+                <outlet property="contentContainer" destination="Xlo-Un-9es" id="mZo-A0-Jgd"/>
+                <outlet property="contentView" destination="EkP-2f-Bad" id="RqY-mU-iwD"/>
+                <outlet property="iconImageView" destination="KVl-t0-7Wn" id="ZFc-4b-FMW"/>
+                <outlet property="messageLabel" destination="9wg-Ax-6wW" id="IZj-mk-cKm"/>
+                <outlet property="titleLabel" destination="WeT-88-XcZ" id="OKl-1m-8ox"/>
+                <outlet property="topSafeAreaConstraint" destination="bK7-2L-ku0" id="udx-bi-Bgc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="AlW-vq-Myv">
+            <rect key="frame" x="0.0" y="0.0" width="435" height="70"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xlo-Un-9es">
+                    <rect key="frame" x="0.0" y="0.0" width="435" height="70"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EkP-2f-Bad">
+                            <rect key="frame" x="10" y="0.0" width="415" height="70"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVl-t0-7Wn">
+                                    <rect key="frame" x="24" y="20" width="30" height="30"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="toast_message_icon">
+                                        <bool key="isElement" value="YES"/>
+                                    </accessibility>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="o8s-Rz-9ta"/>
+                                        <constraint firstAttribute="width" constant="30" id="q8E-vH-dV8"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBE-qj-a7s" customClass="ToastCloseButton" customModule="PokeApp" customModuleProvider="target">
+                                    <rect key="frame" x="361" y="13" width="44" height="44"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <accessibility key="accessibilityConfiguration" identifier="toast_message_close_btn"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="44" id="NgY-dJ-R2g"/>
+                                        <constraint firstAttribute="height" constant="44" id="bNW-Xp-ylO"/>
+                                    </constraints>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="close-white-icon">
+                                        <color key="titleColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="haY-ZM-Bav">
+                                    <rect key="frame" x="74" y="16.666666666666671" width="267" height="37"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WeT-88-XcZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="37" height="17.666666666666668"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="toast_message_title_label"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="15"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wg-Ax-6wW">
+                                            <rect key="frame" x="0.0" y="21.666666666666668" width="32" height="15.333333333333332"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <accessibility key="accessibilityConfiguration" identifier="toast_message_message_label"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="EBE-qj-a7s" firstAttribute="centerY" secondItem="EkP-2f-Bad" secondAttribute="centerY" id="6V5-2A-Uad"/>
+                                <constraint firstItem="KVl-t0-7Wn" firstAttribute="leading" secondItem="EkP-2f-Bad" secondAttribute="leading" constant="24" id="B4c-Y2-4PQ"/>
+                                <constraint firstItem="haY-ZM-Bav" firstAttribute="centerY" secondItem="EkP-2f-Bad" secondAttribute="centerY" id="Gcn-IO-cD7"/>
+                                <constraint firstItem="EBE-qj-a7s" firstAttribute="leading" secondItem="haY-ZM-Bav" secondAttribute="trailing" constant="20" id="hkQ-1y-1Ig"/>
+                                <constraint firstItem="haY-ZM-Bav" firstAttribute="leading" secondItem="KVl-t0-7Wn" secondAttribute="trailing" constant="20" id="u8E-on-Dpu"/>
+                                <constraint firstAttribute="trailing" secondItem="EBE-qj-a7s" secondAttribute="trailing" constant="10" id="vq0-aH-Qz7"/>
+                                <constraint firstItem="KVl-t0-7Wn" firstAttribute="centerY" secondItem="EkP-2f-Bad" secondAttribute="centerY" id="y4u-sV-gAh"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="14"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="EkP-2f-Bad" firstAttribute="top" secondItem="Xlo-Un-9es" secondAttribute="top" id="bK7-2L-ku0"/>
+                        <constraint firstItem="EkP-2f-Bad" firstAttribute="centerX" secondItem="Xlo-Un-9es" secondAttribute="centerX" id="ggf-wR-U0X"/>
+                        <constraint firstAttribute="trailing" secondItem="EkP-2f-Bad" secondAttribute="trailing" constant="10" id="iji-T4-yma"/>
+                        <constraint firstItem="EkP-2f-Bad" firstAttribute="centerY" secondItem="Xlo-Un-9es" secondAttribute="centerY" id="ppP-ic-h3u"/>
+                        <constraint firstItem="EkP-2f-Bad" firstAttribute="leading" secondItem="Xlo-Un-9es" secondAttribute="leading" constant="10" id="x5d-6d-kRu"/>
+                        <constraint firstAttribute="bottom" secondItem="EkP-2f-Bad" secondAttribute="bottom" id="zAn-NI-TP3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vYU-Mp-xxA"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Xlo-Un-9es" secondAttribute="bottom" id="9UA-M7-7c9"/>
+                <constraint firstItem="Xlo-Un-9es" firstAttribute="trailing" secondItem="vYU-Mp-xxA" secondAttribute="trailing" id="HUI-bx-3pg"/>
+                <constraint firstItem="Xlo-Un-9es" firstAttribute="top" secondItem="AlW-vq-Myv" secondAttribute="top" id="ios-v5-aWL"/>
+                <constraint firstItem="Xlo-Un-9es" firstAttribute="leading" secondItem="vYU-Mp-xxA" secondAttribute="leading" id="o8n-Nu-vbG"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="156.52173913043478" y="-118.19196428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="close-white-icon" width="44" height="44"/>
+    </resources>
+</document>
