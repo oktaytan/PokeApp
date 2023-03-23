@@ -17,4 +17,7 @@ class PokeListVC: BaseViewController {
         
     }
     
+    @IBAction func goToPokeDetail(_ sender: Any) {
+        self.coordinatorDelegate?.commonControllerToCoordinator(eventType: .pokeDetail(id: "2"))
+    }
 }
