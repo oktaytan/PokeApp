@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoadingView" customModule="PokeApp" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="2yY-s4-BRq" id="5rI-2A-uo9"/>
+                <outlet property="bigCircle" destination="D5s-6U-zvg" id="g0M-SB-scV"/>
+                <outlet property="smallCircle" destination="uKm-nH-Ibn" id="vgZ-WL-7Da"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="5qv-3H-y1M">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clearsContextBeforeDrawing="NO" alpha="0.85000002384185791" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2yY-s4-BRq">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D5s-6U-zvg" userLabel="Big Circle">
+                    <rect key="frame" x="161.66666666666666" y="403.66666666666669" width="70" height="70"/>
+                    <color key="backgroundColor" name="closeRed"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="oyB-vu-B5g"/>
+                        <constraint firstAttribute="height" constant="70" id="t6q-gm-yHE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKm-nH-Ibn" userLabel="Small Circle">
+                    <rect key="frame" x="179" y="421" width="35" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="1kO-7n-lbB"/>
+                        <constraint firstAttribute="width" constant="35" id="yiC-MJ-UbW"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="7lR-qa-zs0"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="uKm-nH-Ibn" firstAttribute="centerY" secondItem="7lR-qa-zs0" secondAttribute="centerY" id="3Ib-PC-tb5"/>
+                <constraint firstItem="uKm-nH-Ibn" firstAttribute="centerX" secondItem="7lR-qa-zs0" secondAttribute="centerX" id="Anf-9E-EwS"/>
+                <constraint firstItem="2yY-s4-BRq" firstAttribute="leading" secondItem="7lR-qa-zs0" secondAttribute="leading" id="Xd9-fo-CSz"/>
+                <constraint firstItem="2yY-s4-BRq" firstAttribute="trailing" secondItem="7lR-qa-zs0" secondAttribute="trailing" id="YZp-AY-XGM"/>
+                <constraint firstItem="D5s-6U-zvg" firstAttribute="centerX" secondItem="7lR-qa-zs0" secondAttribute="centerX" id="gfC-em-Ld1"/>
+                <constraint firstItem="D5s-6U-zvg" firstAttribute="centerY" secondItem="7lR-qa-zs0" secondAttribute="centerY" id="mX3-Qs-N6L"/>
+                <constraint firstItem="2yY-s4-BRq" firstAttribute="top" secondItem="5qv-3H-y1M" secondAttribute="top" id="mqf-cs-fca"/>
+                <constraint firstAttribute="bottom" secondItem="2yY-s4-BRq" secondAttribute="bottom" id="xwe-Qk-QIL"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="closeRed">
+            <color red="0.90588235294117647" green="0.29803921568627451" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  PokeListVC.swift
 //  PokeApp
 //
 //  Created by Oktay Tanrıkulu on 23.03.2023.
@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class PokeListVC: BaseViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
     }
-
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
 }
-
