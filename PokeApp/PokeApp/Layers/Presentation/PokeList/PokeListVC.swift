@@ -13,11 +13,17 @@ class PokeListVC: BaseViewController {
         super.viewDidLoad()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+    override func setupView() {
+        super.setupView()
+        self.title = AppConstants.AppTitle
     }
     
     @IBAction func goToPokeDetail(_ sender: Any) {
-        self.coordinatorDelegate?.commonControllerToCoordinator(eventType: .pokeDetail(id: "2"))
+        
+        APIHandler.shared.processRequest(target: Endpoint.detail(id: 2)).done { (response: PokemonDetail) in
+            print(response)
+        }.catch { error in
+            print(error)
+        }
     }
 }
