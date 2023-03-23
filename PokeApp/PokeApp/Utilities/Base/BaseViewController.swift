@@ -16,6 +16,11 @@ class BaseViewController: UIViewController {
         return loadingView
     }()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setupView()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
@@ -30,6 +35,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
+    }
+    
+    func setupView() {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.closeRed]
+        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
+        self.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func showToastMessage(title: String?, message: String?, type: ToastMessageType) {
