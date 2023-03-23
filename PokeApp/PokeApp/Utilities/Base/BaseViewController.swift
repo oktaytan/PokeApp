@@ -9,6 +9,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
     
+    weak var coordinatorDelegate: CommonControllerToCoordinatorDelegate?
+    
     lazy var loadingView: LoadingView = {
         let loadingView = LoadingView()
         return loadingView
