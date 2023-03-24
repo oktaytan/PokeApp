@@ -16,6 +16,13 @@ struct AbilityDetail: Codable {
         case effectEntries = "effect_entries"
         case id, name
     }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.effectEntries = try container.decode([EffectEntry].self, forKey: .effectEntries).filter({ $0.language.name == "en" })
+        self.id = try container.decode(Int.self, forKey: .id)
+        self.name = try container.decode(String.self, forKey: .name)
+    }
 }
 
 // MARK: - EffectEntry
