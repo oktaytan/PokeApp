@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PokeDetailVC: BaseViewController {
+final class PokeDetailVC: BaseViewController {
     
     var isLiked: Bool = false
 

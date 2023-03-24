@@ -10,7 +10,7 @@ import UIKit
 // MARK: - Controller to Coordinator event type
 /// Coordinator ile Controller arasındaki iletişimi sağlar.
 enum AppFlowEventType {
-    case pokeDetail(id: String), finishController
+    case pokeDetail(id: Int), finishController
 }
 
 // MARK: Coordinator To Coordinator event type

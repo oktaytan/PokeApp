@@ -48,7 +48,7 @@ extension PokeListCoordinator {
 }
 
 extension PokeListCoordinator {
-    func goToPokeDetail(id: String) {
+    func goToPokeDetail(id: Int) {
         let pokeDetailCoordinator = PokeDetailCoordinator(navigationController: navigationController, pokeID: id)
         addChild(coordinator: pokeDetailCoordinator)
         pokeDetailCoordinator.callBack = { [weak self] event in
