@@ -11,9 +11,9 @@ final class PokeDetailCoordinator: Coordinator {
     var childCoordinators: [Coordinator] = []
     var navigationController: BaseNavigationController
     var callBack: ((CoordinatorEventType) -> ())?
-    var pokeID: String
+    var pokeID: Int
     
-    init(navigationController: BaseNavigationController, pokeID: String) {
+    init(navigationController: BaseNavigationController, pokeID: Int) {
         self.navigationController = navigationController
         self.pokeID = pokeID
     }

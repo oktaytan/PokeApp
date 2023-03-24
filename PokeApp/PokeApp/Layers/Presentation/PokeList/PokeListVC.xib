@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PokeListVC" customModule="PokeApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="k15-oK-PYo" id="jae-8P-aX5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="2d4-cV-Rl7"/>
             </connections>
         </placeholder>
@@ -18,35 +19,20 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POKE LIST" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K2O-b2-mSP">
-                    <rect key="frame" x="155.66666666666666" y="319" width="82" height="214"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-vL-8Y0">
-                    <rect key="frame" x="146.66666666666666" y="633" width="100" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="F6R-SH-PEP"/>
-                        <constraint firstAttribute="width" constant="100" id="S4g-2e-Hmm"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Detail"/>
-                    <connections>
-                        <action selector="goToPokeDetail:" destination="-1" eventType="touchUpInside" id="1xX-HA-35g"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="k15-oK-PYo">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="K2O-b2-mSP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="956-ri-Dir"/>
-                <constraint firstItem="K2O-b2-mSP" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="A0S-ue-boI"/>
-                <constraint firstItem="K2O-b2-mSP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="260" id="i8z-bI-tkN"/>
-                <constraint firstItem="ABz-vL-8Y0" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ikm-pz-V61"/>
-                <constraint firstItem="ABz-vL-8Y0" firstAttribute="top" secondItem="K2O-b2-mSP" secondAttribute="bottom" constant="100" id="nJt-za-fhC"/>
+                <constraint firstItem="k15-oK-PYo" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="0dE-mL-kA8"/>
+                <constraint firstItem="k15-oK-PYo" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="R4E-5w-Brw"/>
+                <constraint firstAttribute="bottom" secondItem="k15-oK-PYo" secondAttribute="bottom" id="UYa-MU-LOm"/>
+                <constraint firstItem="k15-oK-PYo" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="bAS-EP-KdL"/>
             </constraints>
-            <point key="canvasLocation" x="138" y="21"/>
+            <point key="canvasLocation" x="136.64122137404578" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>

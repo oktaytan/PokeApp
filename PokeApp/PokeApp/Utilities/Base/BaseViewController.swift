@@ -7,6 +7,10 @@
 
 import UIKit
 
+enum LoadingType {
+    case fullpage, prefetch
+}
+
 class BaseViewController: UIViewController {
     
     weak var coordinatorDelegate: CommonControllerToCoordinatorDelegate?

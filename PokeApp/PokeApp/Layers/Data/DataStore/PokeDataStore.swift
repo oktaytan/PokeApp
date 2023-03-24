@@ -39,7 +39,9 @@ final class PokeDataStoreImpl: PokeDataStore {
     
     func getPokeList(next: Bool, completion: @escaping PokeListCompletionType) {
         
-        if next { self.page += 1 }
+        if next {
+            self.page += 1
+        }
         
         repo.list(limit: self.limit, offset: self.offset * page, completion: { pokeList, error in
             guard error == nil else {

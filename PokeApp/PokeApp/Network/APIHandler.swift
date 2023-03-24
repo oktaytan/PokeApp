@@ -31,7 +31,7 @@ final class APIHandler {
             AF.request(target.baseURL + target.path, method: target.method, parameters: parameters.0, encoding: parameters.1, headers: target.headers).responseData { (data: DataResponse<Data>) in
                 
                 guard data.response?.statusCode == 200 else {
-                    seal.reject(self.processError(error: .notFound, code: data.response?.statusCode, shouldShowMessage: true))
+                    seal.reject(self.processError(error: .notFound, code: data.response?.statusCode))
                     return
                 }
                 
@@ -41,25 +41,19 @@ final class APIHandler {
                     do {
                         seal.fulfill(try decoder.decode(M.self, from: result))
                     } catch {
-                        seal.reject(self.processError(error: .parse, code: data.response?.statusCode, shouldShowMessage: true))
+                        seal.reject(self.processError(error: .parse, code: data.response?.statusCode))
                     }
                 case .failure:
-                    seal.reject(self.processError(error: .failure, code: data.response?.statusCode, shouldShowMessage: true))
+                    seal.reject(self.processError(error: .failure, code: data.response?.statusCode))
                 }
             }
         }
     }
     
     // MARK: - Process Error
-    private func processError(error: PokeError, code: Int?, shouldShowMessage: Bool) -> NSError {
+    private func processError(error: PokeError, code: Int?) -> NSError {
         
         let responseError =  NSError(domain: Bundle.main.bundleIdentifier ?? "", code: code ?? 0, userInfo: [NSLocalizedDescriptionKey : error.rawValue])
-        
-        if shouldShowMessage == true {
-            DispatchQueue.main.async {
-                ToastMessage.shared.showOnWindow(title: AppConstants.AppTitle, message: responseError.localizedDescription, type: .error)
-            }
-        }
         
         return responseError
     }
