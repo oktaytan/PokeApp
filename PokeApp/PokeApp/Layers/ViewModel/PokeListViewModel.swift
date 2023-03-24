@@ -43,29 +43,31 @@ extension PokeListViewModelImpl {
     }
     
     enum UserInteractivity {
-        case updateData(data: [RowType]), error(message: String?), loading(show: Bool, type: LoadingType)
+        case updateData(data: [RowType]), error(message: String?), loading(show: Bool)
     }
 }
 
 
 extension PokeListViewModelImpl {
     func fetchPokemonList(next: Bool) {
-        self.stateClosure?(.updateUI(data: .loading(show: true, type: next ? .prefetch : .fullpage)))
-        store.getPokeList(next: next) { pokemonList, error in
-            self.stateClosure?(.updateUI(data: .loading(show: false, type: next ? .prefetch : .fullpage)))
+        self.stateClosure?(.updateUI(data: .loading(show: true)))
+        store.getPokeList(next: next) { [weak self] pokemonList, error in
+            self?.stateClosure?(.updateUI(data: .loading(show: false)))
             
             guard error == nil else {
-                self.stateClosure?(.error(error: error))
-                self.prepareUI(pokemonList: nil, next: next)
+                self?.stateClosure?(.error(error: error))
+                self?.prepareUI(pokemonList: nil, next: next)
                 return
             }
             
             guard let pokemonList = pokemonList else {
-                self.prepareUI(pokemonList: nil, next: next)
+                self?.prepareUI(pokemonList: nil, next: next)
                 return
             }
             
-            self.prepareUI(pokemonList: pokemonList, next: next)
+            DispatchQueue.main.async { [weak self] in
+                self?.prepareUI(pokemonList: pokemonList, next: next)
+            }
         }
     }
     

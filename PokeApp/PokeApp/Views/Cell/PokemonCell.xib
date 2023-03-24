@@ -27,8 +27,7 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lnm-6a-fWk">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="80" id="Vua-P2-LlY"/>
-                                            <constraint firstAttribute="width" constant="80" id="eP4-M2-k9y"/>
+                                            <constraint firstAttribute="width" secondItem="lnm-6a-fWk" secondAttribute="height" multiplier="1:1" id="Ueo-fI-M3E"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fUC-y4-oIo">
@@ -64,6 +63,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="lnm-6a-fWk" firstAttribute="height" secondItem="KGk-i7-Jjw" secondAttribute="height" multiplier="0.8" id="yZd-Kr-C43"/>
+            </constraints>
             <connections>
                 <outlet property="containerView" destination="Ap7-CE-L9b" id="XBf-d5-PCG"/>
                 <outlet property="nameLabel" destination="fUC-y4-oIo" id="C7z-eB-Dts"/>

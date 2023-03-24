@@ -47,7 +47,7 @@ final class PokeTableViewImpl: NSObject, TableViewProvider, PokeTableViewProvide
         self.tableView?.dataSource = self
         self.tableView?.prefetchDataSource = self
         self.tableView?.separatorStyle = .none
-        self.tableView?.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 52, right: 0)
+        self.tableView?.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 52, right: 0)
     }
 }
 
