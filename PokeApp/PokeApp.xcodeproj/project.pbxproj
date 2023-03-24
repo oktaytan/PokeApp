@@ -44,6 +44,9 @@
 		66812D6C29CCF9F5004CD51E /* PokemonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D6B29CCF9F5004CD51E /* PokemonDetail.swift */; };
 		66812D6E29CD0382004CD51E /* AbilityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D6D29CD0382004CD51E /* AbilityDetail.swift */; };
 		66812D7029CD0E22004CD51E /* PokeError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66812D6F29CD0E22004CD51E /* PokeError.swift */; };
+		669834C629CD9B72002CB7F8 /* PokeDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669834C529CD9B72002CB7F8 /* PokeDataStore.swift */; };
+		669834C829CD9CF0002CB7F8 /* PokeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669834C729CD9CF0002CB7F8 /* PokeRepository.swift */; };
+		669834CC29CDAF42002CB7F8 /* AbilityDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669834CB29CDAF42002CB7F8 /* AbilityDataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +90,9 @@
 		66812D6B29CCF9F5004CD51E /* PokemonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetail.swift; sourceTree = "<group>"; };
 		66812D6D29CD0382004CD51E /* AbilityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDetail.swift; sourceTree = "<group>"; };
 		66812D6F29CD0E22004CD51E /* PokeError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeError.swift; sourceTree = "<group>"; };
+		669834C529CD9B72002CB7F8 /* PokeDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeDataStore.swift; sourceTree = "<group>"; };
+		669834C729CD9CF0002CB7F8 /* PokeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeRepository.swift; sourceTree = "<group>"; };
+		669834CB29CDAF42002CB7F8 /* AbilityDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityDataStore.swift; sourceTree = "<group>"; };
 		707DDCA54E4BF52C4342E43F /* Pods-PokeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeApp.release.xcconfig"; path = "Target Support Files/Pods-PokeApp/Pods-PokeApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -345,6 +351,8 @@
 		66812D6429CCE3A2004CD51E /* DataStore */ = {
 			isa = PBXGroup;
 			children = (
+				669834C529CD9B72002CB7F8 /* PokeDataStore.swift */,
+				669834CB29CDAF42002CB7F8 /* AbilityDataStore.swift */,
 			);
 			path = DataStore;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 		66812D6629CCE3B4004CD51E /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				669834C729CD9CF0002CB7F8 /* PokeRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -487,7 +496,9 @@
 				66812D1429CC7FE5004CD51E /* BaseViewController.swift in Sources */,
 				66812D6C29CCF9F5004CD51E /* PokemonDetail.swift in Sources */,
 				66812D6129CCDBE7004CD51E /* APIHandler.swift in Sources */,
+				669834CC29CDAF42002CB7F8 /* AbilityDataStore.swift in Sources */,
 				66812D6829CCE411004CD51E /* PokemonList.swift in Sources */,
+				669834C629CD9B72002CB7F8 /* PokeDataStore.swift in Sources */,
 				66812D2F29CC84EA004CD51E /* UIView+Ext.swift in Sources */,
 				66812CF429CC79D6004CD51E /* AppDelegate.swift in Sources */,
 				66812D4429CC9ADE004CD51E /* RouterFlow.swift in Sources */,
@@ -512,6 +523,7 @@
 				66812D5229CCA2AC004CD51E /* PokeDetailVC.swift in Sources */,
 				66812D2629CC83F2004CD51E /* AppDesign.swift in Sources */,
 				66812D2429CC83E4004CD51E /* AppConstants.swift in Sources */,
+				669834C829CD9CF0002CB7F8 /* PokeRepository.swift in Sources */,
 				66812D4A29CC9B4A004CD51E /* PokeListCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,10 +20,5 @@ class PokeListVC: BaseViewController {
     
     @IBAction func goToPokeDetail(_ sender: Any) {
         
-        APIHandler.shared.processRequest(target: Endpoint.detail(id: 2)).done { (response: PokemonDetail) in
-            print(response)
-        }.catch { error in
-            print(error)
-        }
     }
 }
