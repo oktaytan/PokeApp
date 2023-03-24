@@ -32,10 +32,36 @@ final class PokeDetailCoordinator: Coordinator {
 extension PokeDetailCoordinator: CommonControllerToCoordinatorDelegate {
     func commonControllerToCoordinator(eventType: AppFlowEventType) {
         switch eventType {
+        case .pokeDetail(let id):
+            goToPokeDetail(id: id)
         case .finishController:
             finishPokeDetailCoordinator()
-        default:
-            break
         }
+    }
+}
+
+// MARK: - Coordinator To Coordinator
+extension PokeDetailCoordinator {
+    private func resetCoordinator(coordinator: Coordinator) {
+        self.removeChild(coordinator: coordinator)
+    }
+    
+    private func pokeDetailCoordinatorEvent(event: CoordinatorEventType) {
+        switch event {
+        case .finishCoordinator(let coordinator):
+            resetCoordinator(coordinator: coordinator)
+        }
+    }
+}
+
+extension PokeDetailCoordinator {
+    func goToPokeDetail(id: Int) {
+        let pokeDetailCoordinator = PokeDetailCoordinator(navigationController: navigationController, pokeID: id)
+        addChild(coordinator: pokeDetailCoordinator)
+        pokeDetailCoordinator.callBack = { [weak self] event in
+            self?.pokeDetailCoordinatorEvent(event: event)
+        }
+        
+        pokeDetailCoordinator.start()
     }
 }

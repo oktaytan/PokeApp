@@ -24,6 +24,8 @@ final class PokeListVC: BaseViewController, ListControllerBehaviorally {
     private var provider: P!
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var headerLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,14 +34,16 @@ final class PokeListVC: BaseViewController, ListControllerBehaviorally {
         viewModel.start()
     }
     
-    override func setupView() {
-        super.setupView()
-        self.title = AppConstants.AppTitle
-    }
-    
     func inject(viewModel: V, provider: P) {
         self.viewModel = viewModel
         self.provider = provider
+    }
+    
+    override func setupView() {
+        headerLabel.text = AppConstants.AppTitle
+        headerLabel.textColor = .white
+        headerLabel.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+        tableView.roundTopCorners(radius: 20)
     }
     
     func setupTableView() {
@@ -52,13 +56,8 @@ final class PokeListVC: BaseViewController, ListControllerBehaviorally {
         }
     }
     
-    private func handleLoading(show: Bool, type: LoadingType) {
-        switch type {
-        case .fullpage:
-            show ? self.showLoading() : self.hideLoading()
-        case .prefetch:
-            show ? self.showLoading() : self.hideLoading()
-        }
+    private func handleLoading(show: Bool) {
+        show ? self.showLoading() : self.hideLoading()
     }
 }
 
@@ -97,8 +96,8 @@ extension PokeListVC {
             switch data {
             case .updateData(let data):
                 self?.provider.setData(data: data)
-            case .loading(let show, let type):
-                self?.handleLoading(show: show, type: type)
+            case .loading(let show):
+                self?.handleLoading(show: show)
             case .error(let message):
                 self?.handleError(message: message)
             }

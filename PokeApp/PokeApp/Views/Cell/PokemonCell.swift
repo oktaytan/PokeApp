@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class PokemonCell: UITableViewCell {
+final class PokemonCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var photoView: UIImageView!
@@ -32,7 +32,7 @@ class PokemonCell: UITableViewCell {
             self?.nameLabel.text = item.name.uppercased()
             
             let urlString = AppConstants.PokeImageURL + "/\(item.id).png"
-            let placeholder = UIImage(named:"pokeball")
+            let placeholder = UIImage(named:"pokeball-icon")
             let processor = DownsamplingImageProcessor(size: self?.photoView.bounds.size ?? .zero)
                          |> RoundCornerImageProcessor(cornerRadius: 10)
             self?.photoView.kf.indicatorType = .activity
@@ -47,7 +47,7 @@ class PokemonCell: UITableViewCell {
                         .cacheOriginalImage
                     ])
             } else {
-                self?.photoView.image = UIImage(named: "pokeball")
+                self?.photoView.image = UIImage(named: "pokeball-icon")
             }
         }
     }

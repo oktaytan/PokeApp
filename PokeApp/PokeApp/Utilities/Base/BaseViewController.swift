@@ -42,10 +42,6 @@ class BaseViewController: UIViewController {
     }
     
     func setupView() {
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.closeRed]
-        self.navigationController?.navigationBar.titleTextAttributes = textAttributes
-        self.navigationItem.largeTitleDisplayMode = .always
-        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func showToastMessage(title: String?, message: String?, type: ToastMessageType) {
