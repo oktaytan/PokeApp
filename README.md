@@ -1,7 +1,6 @@
 <a name="readme-top"></a>
 
 <!-- PROJECT LOGO -->
-<br />
 <div align="center">
   <h1 align="center">PokeApp</h1>
   <p align="center">Application that lists Pokemon and contains detail information</p>
