@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// TableView Provider protocol tanımı
+// TableView Provider protocol tanımı
 protocol TableViewProvider {
     associatedtype T
     associatedtype I

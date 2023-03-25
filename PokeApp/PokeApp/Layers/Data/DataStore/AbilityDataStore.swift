@@ -22,6 +22,10 @@ final class AbilityDataStoreImpl: AbilityDataStore {
         self.repo = repo
     }
     
+    /// Belirli ability id ile yetenek detya verisini döner.
+    /// - Parameters:
+    ///   - id: Ability id
+    ///   - completion: AbilityDetail ve error dönen closure.
     func getAbilityList(id: Int, completion: @escaping AbilityDataStoreImpl.AbilitiesCompletionType) {
         repo.ability(id: id) { results, error in
             guard error == nil else {

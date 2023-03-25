@@ -38,10 +38,12 @@ final class PokeListViewModelImpl: BaseViewModel, PokeListViewModel {
 
 
 extension PokeListViewModelImpl {
+    /// TableView' de gösterilecek item
     enum RowType {
         case pokemon(data: Pokemon), empty
     }
     
+    /// ViewModel ile View arasındaki iletişim ile gönderilen event'ler.
     enum UserInteractivity {
         case updateData(data: [RowType]), error(message: String?), loading(show: Bool)
     }
@@ -49,6 +51,9 @@ extension PokeListViewModelImpl {
 
 
 extension PokeListViewModelImpl {
+    
+    /// Pokemon listesini DataStore nesnesi aracılığ ile servisten çeker.
+    /// - Parameter next: Sonraki liste
     func fetchPokemonList(next: Bool) {
         self.stateClosure?(.updateUI(data: .loading(show: true)))
         store.getPokeList(next: next) { [weak self] pokemonList, error in
@@ -71,6 +76,10 @@ extension PokeListViewModelImpl {
         }
     }
     
+    /// Pokemon listesi verisini kullanrak ekran gösterilecek tableView için item datası oluşturur.
+    /// - Parameters:
+    ///   - pokemonList: Pokemon data dizisi
+    ///   - next: Sonraki liste
     private func prepareUI(pokemonList: [Pokemon]?, next: Bool) {
         if !next {
             rows.removeAll()

@@ -24,6 +24,7 @@ final class PokeDataStoreImpl: PokeDataStore {
     typealias PokeDetailCompletionType = (PokemonDetail?, Error?) -> Void
     
     private let repo: PokeRepository
+    
     var page = 0
     var limit = 20
     var offset = 20
@@ -32,11 +33,19 @@ final class PokeDataStoreImpl: PokeDataStore {
         self.repo = repo
     }
     
+    /// Pokemon listesinin limit ve offset değerlerini yeniden setler.
+    /// - Parameters:
+    ///   - limit: Listedeki item sayısı - Int
+    ///   - offset: Listenin başlangıç indexi - Int
     func setDataConfiguration(limit: Int, offset: Int) {
         self.limit = limit
         self.offset = offset
     }
     
+    /// Pokemon listesini döner.
+    /// - Parameters:
+    ///   - next: Sonraki liste
+    ///   - completion: Pokemon dizisi ve error dönen closure.
     func getPokeList(next: Bool, completion: @escaping PokeListCompletionType) {
         
         if next {
@@ -58,6 +67,10 @@ final class PokeDataStoreImpl: PokeDataStore {
         })
     }
     
+    /// Belirli pokemon id ile pokemon detay verisi döner.
+    /// - Parameters:
+    ///   - id: Pokemon id
+    ///   - completion: PokemonDetail ve error dönen closure.
     func getPokeDetail(id: Int, completion: @escaping PokeDetailCompletionType) {
         repo.detail(id: id) { results, error in
             guard error == nil else {

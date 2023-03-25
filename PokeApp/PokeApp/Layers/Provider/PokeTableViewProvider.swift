@@ -28,17 +28,22 @@ final class PokeTableViewImpl: NSObject, TableViewProvider, PokeTableViewProvide
     
     private var tableView: UITableView?
     
+    /// ViewModel' den view'e gelen datayı provider'a gönderir.
+    /// - Parameter data: PokeListViewModelImpl.RowType
     func setData(data: [T]?) {
         self.dataList = data
         tableViewReload()
     }
     
+    /// TableView'i reload eder.
     func tableViewReload() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView?.reloadData()
         }
     }
     
+    /// TableView'in delegate ve datasource özelliklerini setler. Cell register işlemlerini gerçekleştirir.
+    /// - Parameter tableView: UITableView
     func setupTableView(tableView: UITableView) {
         self.tableView = tableView
         let cells = [PokemonCell.self, EmptyCell.self]
@@ -52,11 +57,13 @@ final class PokeTableViewImpl: NSObject, TableViewProvider, PokeTableViewProvide
 }
 
 extension PokeTableViewImpl {
+    /// Provider ile ViewController arasındaki iletişim sırasındaki event'leri tanımlar
     enum TableViewUserInteractivity {
         case didSelectPokemon(id: Int), fetchMore
     }
 }
 
+// MARK: - Provider'ın üstlendiği delegate ve dataSource fonksiyonları
 extension PokeTableViewImpl: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -100,7 +107,7 @@ extension PokeTableViewImpl: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-
+// MARK: - Prefetching - Scroll Pagination
 extension PokeTableViewImpl: UITableViewDataSourcePrefetching {
     func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
         for indexPath in indexPaths {

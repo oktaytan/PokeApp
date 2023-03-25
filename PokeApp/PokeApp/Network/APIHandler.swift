@@ -15,6 +15,9 @@ final class APIHandler {
     
     private init() {}
     
+    /// Endpoint'e ait parametreleri varsa bir tuple halinde döner.
+    /// - Parameter task: <#task description#>
+    /// - Returns: <#description#>
     private func buildParams(task: Task) -> ([String: Any], ParameterEncoding) {
         switch task {
         case .requestPlain:
@@ -24,6 +27,9 @@ final class APIHandler {
         }
     }
     
+    /// Servis isteklerinin yapılıp cevabın işlenmesini sağlar.
+    /// - Parameter target: İsteğin yapılacağı endpint' in parametrelerini içeriri.
+    /// - Returns: Promise nesnesi
     func processRequest<M: Codable, T: TargetType>(target: T) -> Promise<M> {
         let parameters = buildParams(task: target.task)
         

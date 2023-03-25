@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class PokemonImageCell: UICollectionViewCell {
 
@@ -27,23 +26,7 @@ final class PokemonImageCell: UICollectionViewCell {
             self?.imageView.backgroundColor = bgColor
             
             let urlString = AppConstants.PokeImageURL + "/\(id).png"
-            let placeholder = UIImage(named:"pokeball-icon")
-            let processor = DownsamplingImageProcessor(size: self?.imageView.bounds.size ?? .zero)
-                         |> RoundCornerImageProcessor(cornerRadius: 0)
-            self?.imageView.kf.indicatorType = .activity
-            if let url = URL(string: urlString) {
-                self?.imageView.kf.setImage(
-                    with: url,
-                    placeholder: placeholder,
-                    options: [
-                        .processor(processor),
-                        .scaleFactor(UIScreen.main.scale),
-                        .transition(.fade(0.5)),
-                        .cacheOriginalImage
-                    ])
-            } else {
-                self?.imageView.image = UIImage(named: "pokeball-icon")
-            }
+            self?.imageView.loadImage(urlString: urlString)
         }
     }
 }

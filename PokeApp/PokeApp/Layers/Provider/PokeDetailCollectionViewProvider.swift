@@ -26,17 +26,22 @@ final class PokeDetailCollectionViewProviderImpl: NSObject, CollectionViewProvid
     
     private var collectionView: UICollectionView?
     
+    /// ViewModel' den view'e gelen datayı provider'a gönderir.
+    /// - Parameter data: PokeDetailViewModelImpl.SectionType
     func setData(data: [T]?) {
         self.dataList = data
         collectionViewReload()
     }
     
+    /// CollectionView'i reload eder.
     func collectionViewReload() {
         DispatchQueue.main.async { [weak self] in
             self?.collectionView?.reloadData()
         }
     }
     
+    /// CollectionView'i için delegate ve datasource özelliklerini setler. Cell register işlemlerini gerçekleştirir.
+    /// - Parameter collectionView: UICollectionView
     func setupCollectionView(collectionView: UICollectionView) {
         self.collectionView = collectionView
         setupCollectionLayout()
@@ -49,6 +54,7 @@ final class PokeDetailCollectionViewProviderImpl: NSObject, CollectionViewProvid
         self.collectionView?.delegate = self
     }
     
+    /// CollectionView için layout setler.
     func setupCollectionLayout() {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
@@ -58,12 +64,16 @@ final class PokeDetailCollectionViewProviderImpl: NSObject, CollectionViewProvid
     }
 }
 
+
 extension PokeDetailCollectionViewProviderImpl {
+    /// Provider ile ViewController arasındaki iletişim sırasındaki event'leri tanımlar
     enum CollectionViewUserInteractivity {
         case goToPokemon(id: Int), showEffect(effect: EffectEntry)
     }
 }
 
+
+// MARK: - Provider'ın üstlendiği delegate ve dataSource fonksiyonları
 extension PokeDetailCollectionViewProviderImpl: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return self.dataList?.count ?? 0
@@ -131,13 +141,14 @@ extension PokeDetailCollectionViewProviderImpl: UICollectionViewDelegate, UIColl
 }
 
 
+// MARK: - Pokemona ait yeteneğin detaylarını gösterecek delege
 extension PokeDetailCollectionViewProviderImpl: AbilityCollectionViewCellDelegate {
     func showEffect(effect: EffectEntry) {
         self.collectionViewStateClosure?(.updateUI(data: .showEffect(effect: effect)))
     }
 }
 
-
+// MARK: - Detay ekranından yeni bir pokemon detay ekranına gönderme işlemi için delege
 extension PokeDetailCollectionViewProviderImpl: TypesCollectionViewCellDelegate {
     func pokeTapped(id: Int) {
         self.collectionViewStateClosure?(.updateUI(data: .goToPokemon(id: id)))

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Kingfisher
 
 final class PokemonCell: UITableViewCell {
 
@@ -32,23 +31,7 @@ final class PokemonCell: UITableViewCell {
             self?.nameLabel.text = item.name.uppercased()
             
             let urlString = AppConstants.PokeImageURL + "/\(item.id).png"
-            let placeholder = UIImage(named:"pokeball-icon")
-            let processor = DownsamplingImageProcessor(size: self?.photoView.bounds.size ?? .zero)
-                         |> RoundCornerImageProcessor(cornerRadius: 10)
-            self?.photoView.kf.indicatorType = .activity
-            if let url = URL(string: urlString) {
-                self?.photoView.kf.setImage(
-                    with: url,
-                    placeholder: placeholder,
-                    options: [
-                        .processor(processor),
-                        .scaleFactor(UIScreen.main.scale),
-                        .transition(.fade(0.5)),
-                        .cacheOriginalImage
-                    ])
-            } else {
-                self?.photoView.image = UIImage(named: "pokeball-icon")
-            }
+            self?.photoView.loadImage(urlString: urlString, radius: 10)
         }
     }
 }

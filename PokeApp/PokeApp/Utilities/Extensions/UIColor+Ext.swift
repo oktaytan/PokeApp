@@ -9,20 +9,8 @@ import UIKit
 
 extension UIColor {
     
-    static var darkBlue: UIColor {
-        return UIColor(named: "darkBlue")!
-    }
-    
     static var lightBlue: UIColor {
         return UIColor(named: "lightBlue")!
-    }
-    
-    static var greyColor: UIColor {
-        return UIColor(named: "greyColor")!
-    }
-    
-    static var midnight: UIColor {
-        return UIColor(named: "midnight")!
     }
     
     static var closeRed: UIColor {

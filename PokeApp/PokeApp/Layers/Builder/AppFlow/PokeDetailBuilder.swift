@@ -11,6 +11,7 @@ protocol PokeDetailBuilder {
     static func build(pokeID: Int, coordinatorDelegate: CommonControllerToCoordinatorDelegate?) -> UIViewController
 }
 
+/// Pokemon detay ekranının yaratır ve bağımlılıklarını inject eder.
 struct PokeDetailBuilderImpl: PokeDetailBuilder {
     static func build(pokeID: Int, coordinatorDelegate: CommonControllerToCoordinatorDelegate?) -> UIViewController {
         let vc = PokeDetailVC(nibName: PokeDetailVC.className, bundle: nil)

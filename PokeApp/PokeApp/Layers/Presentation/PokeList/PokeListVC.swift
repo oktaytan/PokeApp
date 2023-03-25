@@ -34,6 +34,10 @@ final class PokeListVC: BaseViewController, ListControllerBehaviorally {
         viewModel.start()
     }
     
+    /// Controller'a ViewModel ve Provider inject eder.
+    /// - Parameters:
+    ///   - viewModel: PokeListViewModel
+    ///   - provider: PokeTableViewProvider
     func inject(viewModel: V, provider: P) {
         self.viewModel = viewModel
         self.provider = provider
@@ -64,8 +68,8 @@ final class PokeListVC: BaseViewController, ListControllerBehaviorally {
 
 // MARK: - Listeners
 extension PokeListVC {
-    // Observation Listener
     func addObservationListener() {
+        /// ViewModel listener
         self.viewModel.stateClosure = { [weak self] type in
             switch type {
             case .updateUI(let data):
@@ -76,7 +80,7 @@ extension PokeListVC {
             }
         }
         
-        /// TableView provider Listener
+        /// TableView provider listener
         self.provider.tableViewStateClosure = { [weak self] type in
             switch type {
             case .updateUI(let data):
