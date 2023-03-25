@@ -6,22 +6,20 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#about-the-project">Screenshots</a></li>
-    <li><a href="#built-with">Built With</a></li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-  </ol>
-</details>
-
+<summary>Table of Contents</summary>
+<ol>
+  <li><a href="#about-the-project">About The Project</a></li>
+  <li><a href="#about-the-project">Screenshots</a></li>
+  <li><a href="#built-with">Built With</a></li>
+  <li>
+    <a href="#getting-started">Getting Started</a>
+    <ul>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </li>
+</ol>
+<br />
 
 
 <!-- ABOUT THE PROJECT -->
@@ -54,6 +52,7 @@ PromiseKit library was used for asynchronous programming.
 <div>
   <img src="ss_01.png" width="200" height="390">      <img src="ss_02.png" width="200" height="390">
 </div>
+<br />
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
