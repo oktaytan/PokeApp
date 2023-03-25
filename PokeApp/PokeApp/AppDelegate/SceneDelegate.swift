@@ -16,6 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+        /// Pokemanların listelendiği ekran coordinator yardımı ile başlatılıyor.
         let window = UIWindow(windowScene: windowScene)
         let navController = BaseNavigationController()
         self.coordinator = PokeListCoordinator(navigationController: navController)

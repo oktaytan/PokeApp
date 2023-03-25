@@ -53,7 +53,7 @@ class TypesCollectionViewCell: UICollectionViewCell {
 
 }
 
-
+// MARK: - CollectionView Delegate and DataSource
 extension TypesCollectionViewCell: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1

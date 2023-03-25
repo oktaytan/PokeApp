@@ -45,6 +45,7 @@ final class AbilityCollectionViewCell: UICollectionViewCell {
 }
 
 
+// MARK: - TableView Delegate and DataSource
 extension AbilityCollectionViewCell: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

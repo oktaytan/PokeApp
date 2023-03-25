@@ -44,6 +44,10 @@ final class PokeDetailVC: BaseViewController, CollectionControllerBehaviorally {
         self.goBack()
     }
     
+    /// Controller'a ViewModel ve Provider inject eder.
+    /// - Parameters:
+    ///   - viewModel: PokeDetailViewModel
+    ///   - provider: PokeDetailCollectionViewProvider
     func inject(viewModel: V, provider: P) {
         self.viewModel = viewModel
         self.provider = provider
@@ -68,6 +72,7 @@ final class PokeDetailVC: BaseViewController, CollectionControllerBehaviorally {
 // MARK: - Listeners
 extension PokeDetailVC {
     func addObservationListener() {
+        /// ViewModel listener
         self.viewModel.stateClosure = { [weak self] type in
             switch type {
             case .updateUI(let data):
@@ -78,7 +83,7 @@ extension PokeDetailVC {
             }
         }
         
-        /// TableView provider Listener
+        /// TableView provider listener
         self.provider.collectionViewStateClosure = { [weak self] type in
             switch type {
             case .updateUI(let data):

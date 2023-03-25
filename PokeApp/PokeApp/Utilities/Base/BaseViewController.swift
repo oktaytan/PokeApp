@@ -7,10 +7,6 @@
 
 import UIKit
 
-enum LoadingType {
-    case fullpage, prefetch
-}
-
 class BaseViewController: UIViewController {
     
     weak var coordinatorDelegate: CommonControllerToCoordinatorDelegate?
@@ -42,14 +38,17 @@ class BaseViewController: UIViewController {
     }
     
     func setupView() {
+        
     }
     
+    // Ekranda üst uyarı barı oluşturur.
     func showToastMessage(title: String?, message: String?, type: ToastMessageType) {
         DispatchQueue.main.async {
             ToastMessage.shared.showOnWindow(title: title, message: message ?? "", type: type)
         }
     }
     
+    // Ekranda fullpage loading animasyonu gösterir.
     func showLoading() {
         guard !view.subviews.contains(loadingView) else {
             loadingView.start()
@@ -62,6 +61,7 @@ class BaseViewController: UIViewController {
         loadingView.start()
     }
     
+    // Ekrandaki loading animasyonunu kaldırır.
     func hideLoading() {
         guard view.subviews.contains(loadingView) else {
             return
@@ -71,6 +71,7 @@ class BaseViewController: UIViewController {
         loadingView.stop()
     }
     
+    // Navbar'a varsa action ile butonn ekler.
     func setupNavBar(title: String?, leftIcon: String?, rightIcon: String?, leftItemAction: Selector? = nil, rightItemAction: Selector? = nil) {
         if let leftIcon = leftIcon {
             let leftItem = UIBarButtonItem(image: UIImage(named: leftIcon)?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: leftItemAction)
@@ -85,6 +86,7 @@ class BaseViewController: UIViewController {
         self.title = title
     }
     
+    // Önceki controller'a geri döner.
     @objc func goBack() {
         if self.navigationController?.viewControllers.count == 1 {
             self.dismiss(animated: true)

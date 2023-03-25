@@ -51,14 +51,17 @@ final class PokeDetailViewModelImpl: BaseViewModel, PokeDetailViewModel {
 
 
 extension PokeDetailViewModelImpl {
+    /// CollectionView' de gösterilecek section
     enum SectionType {
         case pokemon(rows: [RowType]), ability(data: [AbilityDetail]), types(data: [TypeElement])
     }
     
+    /// CollectionView' de gösterilecek item
     enum RowType {
         case image(id: Int), name(name: String)
     }
     
+    /// ViewModel ile View arasındaki iletişim ile gönderilen event'ler.
     enum UserInteractivity {
         case updateData(data: [SectionType]), error(message: String?), loading(show: Bool)
     }
@@ -66,6 +69,9 @@ extension PokeDetailViewModelImpl {
 
 
 extension PokeDetailViewModelImpl {
+    
+    /// Belirli pokemon id ile DataStore nesnesini kullanrak pokemon detay verisini çeker.
+    /// - Parameter id: Pokemon id
     private func fetchPokemonDetail(id: Int) {
         serviceGroup?.enter()
         self.stateClosure?(.updateUI(data: .loading(show: true)))
@@ -86,6 +92,7 @@ extension PokeDetailViewModelImpl {
         }
     }
     
+    /// Ability id ile DataStore nesnesini kullanarak ability detay verisini çeker.
     private func fetchAbilityDetail() {
         guard let pokemonDetail = pokemonDetail else {
             self.stateClosure?(.updateUI(data: .loading(show: false)))
@@ -122,6 +129,7 @@ extension PokeDetailViewModelImpl {
         }
     }
     
+    /// Pokemon detay ve ability detay verisini kullanrak ekran gösterilecek collectionView için item datası oluşturur.
     private func prepareUI() {
         self.sections.removeAll()
         
