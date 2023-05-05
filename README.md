@@ -51,7 +51,8 @@ PromiseKit library was used for asynchronous programming.
 ## Screenshots
 
 <div>
-  <img src="ss_01.png" width="200" height="390">      <img src="ss_02.png" width="200" height="390">
+  <img src="ss_01.png" width="200">
+  <img src="ss_02.png" width="200">
 </div>
 <br />
 
